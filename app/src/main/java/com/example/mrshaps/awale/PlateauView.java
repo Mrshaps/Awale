@@ -23,7 +23,7 @@ public class PlateauView extends LinearLayout implements OnClickListener{
 	
 	public PlateauView(Context context) {
 		super(context);
-		
+		//test
 		LayoutInflater li = ((Activity)context).getLayoutInflater();
 		li.inflate(R.layout.activity_plateau, this);
 		// definir la vue
@@ -46,7 +46,7 @@ public class PlateauView extends LinearLayout implements OnClickListener{
 	@Override
 	protected void onDraw(Canvas canvas) {
         /*
-		// associer les éléments aux données
+		//     associer les éléments aux données
 		Partie p = ModeleJeu.recup(ctx);
 		if (p.getJoueur_actif() == Partie.JOUEUR0){
 			status_J0.setText(" A J0 de jouer");
