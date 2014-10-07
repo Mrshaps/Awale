@@ -20,6 +20,8 @@ public class PlateauView extends LinearLayout implements OnClickListener{
 	Button plateau[]  = null;
 	//Partie p = null;
 	Context ctx = null;
+
+
 	
 	public PlateauView(Context context) {
 		super(context);
@@ -35,12 +37,15 @@ public class PlateauView extends LinearLayout implements OnClickListener{
 
 		plateau = new Button[12];
 		for (int i=0; i< 12 ; i++){
-			int resID = getResources().getIdentifier("Button_"+i,"id","fr.iutbm.couchot.android_awale");
-			plateau[i] = (Button) this.findViewById(resID);
+			int resID = getResources().getIdentifier("button_plateau"+i,"id","com.example.mrshaps.awale");
+
+            System.out.println(resID);
+
+            plateau[i] = (Button) this.findViewById(resID);
 			plateau[i].setOnClickListener(this);		        			
 		}
 		ctx = context;
-		this.setWillNotDraw(false); // pour que la méthode OnDraw soit invoquee
+		//this.setWillNotDraw(false); // pour que la méthode OnDraw soit invoquee
 	}
 
 	@Override
@@ -73,7 +78,7 @@ public class PlateauView extends LinearLayout implements OnClickListener{
 		int casecliquee = 0;
 		Partie p = ModeleJeu.recup(ctx);
 		for (int i=0; i< 12 ; i++){
-			int resID = getResources().getIdentifier("Button_"+i,"id","fr.iutbm.couchot.android_awale");
+			int resID = getResources().getIdentifier("Button_plateau"+i,"id","com.example.mrshaps.awale");
 			if (v.getId() == resID)
 				casecliquee = i;
 		}
