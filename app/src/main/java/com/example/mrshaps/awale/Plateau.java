@@ -1,7 +1,6 @@
 package com.example.mrshaps.awale;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 
 /**

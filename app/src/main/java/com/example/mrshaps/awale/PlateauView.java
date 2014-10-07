@@ -18,7 +18,7 @@ public class PlateauView extends LinearLayout implements OnClickListener{
 	TextView graines_j0 = null;
 	TextView graines_j1 = null;
 	Button plateau[]  = null;
-	//Partie p = null;
+	Partie p = null;
 	Context ctx = null;
 
 
@@ -39,8 +39,6 @@ public class PlateauView extends LinearLayout implements OnClickListener{
 		for (int i=0; i< 12 ; i++){
 			int resID = getResources().getIdentifier("button_plateau"+i,"id","com.example.mrshaps.awale");
 
-            System.out.println(resID);
-
             plateau[i] = (Button) this.findViewById(resID);
 			plateau[i].setOnClickListener(this);		        			
 		}
@@ -50,7 +48,7 @@ public class PlateauView extends LinearLayout implements OnClickListener{
 
 	@Override
 	protected void onDraw(Canvas canvas) {
-        /*
+
 		//     associer les éléments aux données
 		Partie p = ModeleJeu.recup(ctx);
 		if (p.getJoueur_actif() == Partie.JOUEUR0){
@@ -70,11 +68,11 @@ public class PlateauView extends LinearLayout implements OnClickListener{
 		
 		graines_j0.setText(""+p.getGraines_joueur_0());
 		graines_j1.setText(""+p.getGraines_joueur_1());
-*/
+
     }
 
 	public void onClick(View v) {
-        /*
+
 		int casecliquee = 0;
 		Partie p = ModeleJeu.recup(ctx);
 		for (int i=0; i< 12 ; i++){
@@ -85,7 +83,7 @@ public class PlateauView extends LinearLayout implements OnClickListener{
 		p.a_joue(casecliquee);
 		
 		this.invalidate();
-		*/
+
 	}
 	
 	
