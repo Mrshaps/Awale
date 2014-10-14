@@ -21,6 +21,8 @@ public class PlateauView extends LinearLayout implements OnClickListener{
 	Partie p = null;
 	Context ctx = null;
 
+    String bonjour;
+
 
 	
 	public PlateauView(Context context) {
